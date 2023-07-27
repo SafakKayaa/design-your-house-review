@@ -1,54 +1,91 @@
-body{
+body {
     margin: 0;
     padding: 0;
+
 }
 
-.logo{
+.bgimage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.logo {
     width: 100%;
     text-align: center;
     height: 15vh;
 }
 
-nav{
+nav {
     width: 100%;
     font-size: 0.85rem;
 }
 
-ul{
+ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     padding: 0;
 }
+
 .banner {
     margin: 8rem 0 6rem 0;
     text-align: center;
-    padding: 0 1rem ;
+    padding: 0 1rem;
 
 }
+
 .banner h1 {
     font-size: 2.5rem;
     padding: 0;
     margin-bottom: 2rem;
 
 }
-.buttons{
-    text-align: center;
-    
+
+main {
+    color: white;
 }
-a{
+.buttons {
+    text-align: center;
+
+}
+
+a {
     text-decoration: none;
     font-size: 0.9rem;
-    color: black;
+    color: white;
 
 }
-button{
-width: 25%;
-padding: 0.8rem;
-border-radius: 1rem;
-cursor: pointer;
-border:rgb(43, 161, 159) 1px solid;
-margin: 0 1rem ;
-background-color:transparent;
 
+button {
+    width: 25%;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: rgb(43, 161, 159) 1px solid;
+    margin: 0 1rem;
+    background-color: transparent;
+    position: relative;
+    color: white;
+
+}
+
+span{
+    width: 0;
+    background-color: rgb(43, 161, 159);
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+
+}
+button:hover span{
+    width: 100%;
+    background-color: rgb(43, 161, 159);
+    transition: 0.5s;
 }
