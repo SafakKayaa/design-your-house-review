@@ -1,7 +1,17 @@
+* {
+    font-family: sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
 
+}
+
+img[src="./img/logo.jpeg"] {
+    cursor: pointer;
+    height: 90%;
+  
 }
 
 .bgimage {
@@ -15,13 +25,17 @@ body {
 
 .logo {
     width: 100%;
-    text-align: center;
     height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
 }
 
 nav {
-    width: 100%;
-    font-size: 0.85rem;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
 }
 
 ul {
@@ -29,10 +43,12 @@ ul {
     display: flex;
     justify-content: space-around;
     padding: 0;
+    color: white;
+
 }
 
 .banner {
-    margin: 8rem 0 6rem 0;
+    margin: 6rem 0 6rem 0;
     text-align: center;
     padding: 0 1rem;
 
@@ -48,6 +64,7 @@ ul {
 main {
     color: white;
 }
+
 .buttons {
     text-align: center;
 
@@ -56,12 +73,11 @@ main {
 a {
     text-decoration: none;
     font-size: 0.9rem;
-    color: white;
 
 }
 
 button {
-    width: 25%;
+    width: 33%;
     padding: 0.8rem;
     border-radius: 1rem;
     cursor: pointer;
@@ -70,10 +86,11 @@ button {
     background-color: transparent;
     position: relative;
     color: white;
+    font-size: 0.75rem;
 
 }
 
-span{
+span {
     width: 0;
     background-color: rgb(43, 161, 159);
     height: 100%;
@@ -84,8 +101,36 @@ span{
 
 
 }
-button:hover span{
+
+button:hover span {
     width: 100%;
     background-color: rgb(43, 161, 159);
     transition: 0.5s;
+}
+
+li{
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+
+}
+
+nav ul li::after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after{
+    width: 100%;
 }
